@@ -22,63 +22,132 @@ namespace MHXYBox
     /// </summary>
     public partial class MainWindow : Window
     {
+        // 摄妖香
+        int SYX = 1800;
+        // 回梦丹
+        int HMD = 3600;
+        // 双/三倍
+        int Shuang = 3600;
+        DispatcherTimer timer = new DispatcherTimer();
         public MainWindow()
         {
             InitializeComponent();
-            DispatcherTimer Timer1 = new DispatcherTimer();
-            Timer1.Interval = TimeSpan.FromSeconds(1);
-            Timer1.Tick += timer1_Tick;
-            Timer1.Start();
+
+            timer.Interval = TimeSpan.FromSeconds(1);
+            timer.Tick += Tx0_Tick;
+            timer.Start();
         }
 
         private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }
-        void timer1_Tick(object sender, EventArgs e)
+
+        void Tx0_Tick(object sender, EventArgs e)
         {
-            Tx1.Text = DateTime.Now.ToLongTimeString();
+            Tx0.Text = DateTime.Now.ToLongTimeString();
+        }
+        void Tx1_Tick(object sender, EventArgs e)
+        {
+            if (SYX > 0)
+            {
+                Tx1.Text = (SYX / 60).ToString() + ":" + (SYX % 60).ToString();
+                SYX--;
+            }
+            else
+            {
+                timer.Tick -= Tx1_Tick;
+            }
+        }
+        void Tx2_Tick(object sender, EventArgs e)
+        {
+            if (HMD > 0)
+            {
+                Tx2.Text = (HMD / 60).ToString() + ":" + (HMD % 60).ToString();
+                HMD--;
+            }
+            else
+            {
+                timer.Tick -= Tx2_Tick;
+            }
+        }
+        void Tx3_Tick(object sender, EventArgs e)
+        {
+        }
+        void Tx4_Tick(object sender, EventArgs e)
+        {
+        }
+        void Tx5_Tick(object sender, EventArgs e)
+        {
+        }
+        void Tx6_Tick(object sender, EventArgs e)
+        {
+        }
+        void Tx7_Tick(object sender, EventArgs e)
+        {
+        }
+        void Tx8_Tick(object sender, EventArgs e)
+        {
+        }
+        void Tx9_Tick(object sender, EventArgs e)
+        {
+        }
+        void Tx10_Tick(object sender, EventArgs e)
+        {
+        }
+        void Tx11_Tick(object sender, EventArgs e)
+        {
+        }
+        private void Bt0_Click(object sender, RoutedEventArgs e)
+        {
+            
         }
         private void Bt1_Click(object sender, RoutedEventArgs e)
         {
-            if(Bt1.Content.ToString() == "Start")
-            {
-                Bt1.Content = "Stop";
-            }
-            else
-            {
-                Bt1.Content = "Start";
-            }
+            // 启动摄妖香计时器
+            SYX = 1800;
+            timer.Tick += Tx1_Tick;
         }
         private void Bt2_Click(object sender, RoutedEventArgs e)
         {
-            if (Bt2.Content.ToString() == "Start")
-            {
-                Bt2.Content = "Stop";
-            }
-            else
-            {
-                Bt2.Content = "Start";
-            }
-            DispatcherTimer Timer2 = new DispatcherTimer();
-            Timer2.Interval = TimeSpan.FromSeconds(1);
-            Timer2.Tick += timer2_Tick;
-            Timer2.Start();
-        }
-        void timer2_Tick(object sender, EventArgs e)
-        {
-            Tx2.Text = DateTime.Now.ToLongTimeString();
+            HMD = 3600;
+            timer.Tick += Tx2_Tick;
         }
         private void Bt3_Click(object sender, RoutedEventArgs e)
         {
-            if (Bt3.Content.ToString() == "Start")
-            {
-                Bt3.Content = "Stop";
-            }
-            else
-            {
-                Bt3.Content = "Start";
-            }
+            
+        }
+        private void Bt4_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void Bt5_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void Bt6_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void Bt7_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void Bt8_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void Bt9_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void Bt10_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void Bt11_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
