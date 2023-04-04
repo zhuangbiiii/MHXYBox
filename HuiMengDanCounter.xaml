@@ -1,0 +1,54 @@
+﻿<Window x:Class="MHXYBox.HuiMengDanCounter"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MHXYBox"
+        mc:Ignorable="d"
+        Title="回梦丹计数器"
+        SizeToContent="WidthAndHeight">
+
+    <Grid x:Name="TimeGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="64" />
+            <RowDefinition Height="32" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="64" />
+            <ColumnDefinition Width="64" />
+            <ColumnDefinition Width="64" />
+            <ColumnDefinition Width="64" />
+            <ColumnDefinition Width="64" />
+        </Grid.ColumnDefinitions>
+        <Button Name="btFURONG" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="55" Height="55" Click="Bt_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/furong.png"/>
+            </Button.Background>
+        </Button>
+        <TextBlock Name="tFURONG" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Text="0/3" />
+        <Button Name="btLINGFU" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="55" Height="55" Click="Bt_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/lingfu.png"/>
+            </Button.Background>
+        </Button>
+        <TextBlock Name="tLINGFU" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Text="0/3" />
+        <Button Name="btWUZHONGXIAN" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Width="55" Height="55" Click="Bt_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/wuzhongxian.png"/>
+            </Button.Background>
+        </Button>
+        <TextBlock Name="tWUZHONGXIAN" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Text="0/3" />
+        <Button Name="btJINGPING" Grid.Row="0" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" Width="55" Height="55" Click="Bt_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/jingping.png"/>
+            </Button.Background>
+        </Button>
+        <TextBlock Name="tJINGPING" Grid.Row="1" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" Text="0/3" />
+        <Button Name="btLVFA" Grid.Row="0" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" Width="55" Height="55" Click="Bt_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/lvfa.png"/>
+            </Button.Background>
+        </Button>
+        <TextBlock Name="tLVFA" Grid.Row="1" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" Text="0/3" />
+    </Grid>
+</Window>

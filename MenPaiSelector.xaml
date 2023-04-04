@@ -1,7 +1,7 @@
 ﻿<Window x:Class="MHXYBox.MenPaiSelector"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Input" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen">
+        Title="门派选择" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen">
     <Grid x:Name="TimeGrid">
         <Grid.RowDefinitions>
             <RowDefinition Height="50" />

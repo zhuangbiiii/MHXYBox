@@ -7,4 +7,20 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="furong.png" />
+    <None Remove="jingping.png" />
+    <None Remove="lingfu.png" />
+    <None Remove="lvfa.png" />
+    <None Remove="wuzhongxian.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="furong.png" />
+    <Resource Include="jingping.png" />
+    <Resource Include="lingfu.png" />
+    <Resource Include="lvfa.png" />
+    <Resource Include="wuzhongxian.png" />
+  </ItemGroup>
+
 </Project>

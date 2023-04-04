@@ -7,10 +7,16 @@
         xmlns:CodeAnalysis="clr-namespace:Microsoft.CodeAnalysis" x:Class="MHXYBox.MainWindow"
         mc:Ignorable="d"
         Title="MHXY Box" 
-        Height="700" 
+        Height="720" 
         Width="600">
 
-    <StackPanel Margin="8,8,8,8">
+    <StackPanel>
+        <Menu>
+            <MenuItem Header="更多功能">
+                <MenuItem Header="回梦丹计数器" Click="MenuItem0_Click"/>
+                <MenuItem Header="联系绝情华丽申请添加更多功能"/>
+            </MenuItem>
+        </Menu>
         <TextBlock TextWrapping="Wrap" FontSize="32" FontWeight="Bold" Height="50"><Run Language="zh-cn" Text="————时间提醒————"/><LineBreak/><Run Language="zh-cn"/></TextBlock>
         <Grid Height="151">
             <Grid.RowDefinitions>

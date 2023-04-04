@@ -193,6 +193,11 @@ namespace MHXYBox
             }
         }
 
+        private void MenuItem0_Click(object sender, EventArgs e)
+        {
+            HuiMengDanCounter huiMengDanCounter = new HuiMengDanCounter();
+            huiMengDanCounter.Show();
+        }
         private void Bt0_Click(object sender, RoutedEventArgs e)
         {
             
@@ -200,24 +205,40 @@ namespace MHXYBox
         private void Bt1_Click(object sender, RoutedEventArgs e)
         {
             // 启动摄妖香计时器
+            if(SYX > 0)
+            {
+                timer.Tick -= Tx1_Tick;
+            }
             SYX = 1800;
             timer.Tick += Tx1_Tick;
         }
         private void Bt2_Click(object sender, RoutedEventArgs e)
         {
             // 启动回梦丹计时器
+            if(HMD > 0)
+            {
+                timer.Tick -= Tx2_Tick;
+            }
             HMD = 3600;
             timer.Tick += Tx2_Tick;
         }
         private void Bt3_Click(object sender, RoutedEventArgs e)
         {
             // 启动双/三倍计时器
+            if(Shuang > 0)
+            {
+                timer.Tick -= Tx3_Tick;
+            }
             Shuang += 3600;
             timer.Tick += Tx3_Tick;
         }
         private void Bt4_Click(object sender, RoutedEventArgs e)
         {
             // 启动年卡加成计时器
+            if(NianKa > 0)
+            {
+                timer.Tick -= Tx4_Tick;
+            }
             NianKa = 10800;
             timer.Tick += Tx4_Tick;
         }
@@ -231,6 +252,10 @@ namespace MHXYBox
             bianShenKaSelector.Closed += (s, args) =>
             {
                 // 开始倒计时
+                if(BianShenKa >  0)
+                {
+                    timer.Tick -= Tx5_Tick;
+                }
                 BianShenKa = bianShenKaSelector.BianShenKaDuration;
                 timer.Tick += Tx5_Tick;
             };
@@ -253,6 +278,10 @@ namespace MHXYBox
         private void YG1Reset_Click(object sender, RoutedEventArgs e)
         {
             // 重设月光1计时器
+            if(YG1 > 0)
+            {
+                timer.Tick -= YG1_Tick;
+            }
             YG1 = 1800;
             timer.Tick += YG1_Tick;
         }
@@ -260,6 +289,10 @@ namespace MHXYBox
         private void YG2Reset_Click(object sender, RoutedEventArgs e)
         {
             // 重设月光2计时器
+            if(YG2 > 0)
+            {
+                timer.Tick -= YG2_Tick;
+            }
             YG2 = 1800;
             timer.Tick += YG2_Tick;
         }
@@ -267,6 +300,10 @@ namespace MHXYBox
         private void YG3Reset_Click(object sender, RoutedEventArgs e)
         {
             // 重设月光3计时器
+            if(YG3 > 0)
+            { 
+                timer.Tick -= YG3_Tick;
+            }
             YG3 = 1800;
             timer.Tick += YG3_Tick;
         }
@@ -274,6 +311,10 @@ namespace MHXYBox
         private void YG4Reset_Click(object sender, RoutedEventArgs e)
         {
             // 重设月光4计时器
+            if(YG4 > 0)
+            {
+                timer.Tick -= YG4_Tick;
+            }
             YG4 = 1800;
             timer.Tick += YG4_Tick;
         }
@@ -281,6 +322,10 @@ namespace MHXYBox
         private void YG5Reset_Click(object sender, RoutedEventArgs e)
         {
             // 重设月光5计时器
+            if(YG5 > 0)
+            {
+                timer.Tick -= YG5_Tick;
+            }
             YG5 = 1800;
             timer.Tick += YG5_Tick;
         }
