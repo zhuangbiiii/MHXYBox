@@ -6,21 +6,23 @@
         xmlns:local="clr-namespace:MHXYBox"
         xmlns:CodeAnalysis="clr-namespace:Microsoft.CodeAnalysis" x:Class="MHXYBox.MainWindow"
         mc:Ignorable="d"
-        Title="MHXY Box" Height="600" Width="800">
+        Title="MHXY Box" 
+        Height="700" 
+        Width="600">
 
     <StackPanel Margin="8,8,8,8">
         <TextBlock TextWrapping="Wrap" FontSize="32" FontWeight="Bold" Height="50"><Run Language="zh-cn" Text="————时间提醒————"/><LineBreak/><Run Language="zh-cn"/></TextBlock>
-        <Grid x:Name="TimeGrid" Height="151">
+        <Grid Height="151">
             <Grid.RowDefinitions>
                 <RowDefinition Height="50" />
                 <RowDefinition Height="50" />
                 <RowDefinition Height="50" />
             </Grid.RowDefinitions>
-
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="128" />
+                <ColumnDefinition Width="64" />
                 <ColumnDefinition Width="128" />
-                <ColumnDefinition Width="128" />
+                <ColumnDefinition Width="64" />
                 <ColumnDefinition Width="128" />
             </Grid.ColumnDefinitions>
             <Button Name="Bt0" Grid.Column="0" Grid.Row="0" Content="当前时间" HorizontalAlignment="Center" VerticalAlignment="Center" Width="88" Height="32" Click="Bt0_Click"/>
@@ -35,37 +37,85 @@
             <TextBlock Name="Tx3" Grid.Column="3" Grid.Row="0" HorizontalAlignment="Left" TextWrapping="Wrap" Text="N/A" VerticalAlignment="Center" FontSize="16"/>
             <TextBlock Name="Tx4" Grid.Column="3" Grid.Row="1" HorizontalAlignment="Left" TextWrapping="Wrap" Text="N/A" VerticalAlignment="Center" FontSize="16"/>
             <TextBlock Name="Tx5" Grid.Column="3" Grid.Row="2" HorizontalAlignment="Left" TextWrapping="Wrap" Text="N/A" VerticalAlignment="Center" FontSize="16"/>
-
+            <Button Name="GuiHuan" Grid.Column="4" Grid.Row="0" Content="归还" HorizontalAlignment="Center" VerticalAlignment="Center" Width="88" Height="32" Click="GuiHuan_Click"/>
         </Grid>
+        
         <TextBlock TextWrapping="Wrap" FontSize="32" FontWeight="Bold" Height="50"><Run Language="zh-cn" Text="————月光提醒————"/><LineBreak/><Run Language="zh-cn"/></TextBlock>
-        <Grid x:Name="MoonGrid" Height="151">
+        <Grid Height="151">
             <Grid.RowDefinitions>
                 <RowDefinition Height="50" />
                 <RowDefinition Height="50" />
                 <RowDefinition Height="50" />
             </Grid.RowDefinitions>
-
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="128" />
                 <ColumnDefinition Width="128" />
                 <ColumnDefinition Width="128" />
                 <ColumnDefinition Width="128" />
             </Grid.ColumnDefinitions>
-            <Button Name="Bt6" Grid.Column="0" Grid.Row="0" Content="昼/夜" HorizontalAlignment="Center" VerticalAlignment="Center" Width="88" Height="32" Click="Bt6_Click"/>
-            <Button Name="Bt7" Grid.Column="0" Grid.Row="1" Content="摄妖香" HorizontalAlignment="Center" VerticalAlignment="Center" Width="88" Height="32" Click="Bt7_Click"/>
-            <Button Name="Bt8" Grid.Column="0" Grid.Row="2" Content="回梦丹" HorizontalAlignment="Center" VerticalAlignment="Center" Width="88" Height="32" Click="Bt8_Click"/>
-            <TextBlock Name="Tx6" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" TextWrapping="Wrap" Text="N/A" VerticalAlignment="Center" FontSize="16"/>
-            <TextBlock Name="Tx7" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" TextWrapping="Wrap" Text="N/A" VerticalAlignment="Center" FontSize="16"/>
-            <TextBlock Name="Tx8" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" TextWrapping="Wrap" Text="N/A" VerticalAlignment="Center" FontSize="16"/>
-            <Button Name="Bt9" Grid.Column="2" Grid.Row="0" Content="双/三" HorizontalAlignment="Center" VerticalAlignment="Center" Width="88" Height="32" Click="Bt9_Click"/>
-            <Button Name="Bt10" Grid.Column="2" Grid.Row="1" Content="年卡" HorizontalAlignment="Center" VerticalAlignment="Center" Width="88" Height="32" Click="Bt10_Click"/>
-            <Button Name="Bt11" Grid.Column="2" Grid.Row="2" Content="变身卡" HorizontalAlignment="Center" VerticalAlignment="Center" Width="88" Height="32" Click="Bt11_Click"/>
-            <TextBlock Name="Tx9" Grid.Column="3" Grid.Row="0" HorizontalAlignment="Left" TextWrapping="Wrap" Text="N/A" VerticalAlignment="Center" FontSize="16"/>
-            <TextBlock Name="Tx10" Grid.Column="3" Grid.Row="1" HorizontalAlignment="Left" TextWrapping="Wrap" Text="N/A" VerticalAlignment="Center" FontSize="16"/>
-            <TextBlock Name="Tx11" Grid.Column="3" Grid.Row="2" HorizontalAlignment="Left" TextWrapping="Wrap" Text="N/A" VerticalAlignment="Center" FontSize="16"/>
-
+            <Button Name="Bt6" Grid.Column="0" Grid.Row="0" Content="月光1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="88" Height="32" Click="BtMoon_Click"/>
+            <Button Name="Bt7" Grid.Column="0" Grid.Row="1" Content="月光2" HorizontalAlignment="Center" VerticalAlignment="Center" Width="88" Height="32" Click="BtMoon_Click"/>
+            <Button Name="Bt8" Grid.Column="0" Grid.Row="2" Content="月光3" HorizontalAlignment="Center" VerticalAlignment="Center" Width="88" Height="32" Click="BtMoon_Click"/>
+            <StackPanel Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="96">
+                <TextBlock Name="YG1TX" TextWrapping="Wrap" Text="N/A" FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <Button Name="YG1Reset" Content="重置" Click="YG1Reset_Click"/>
+            </StackPanel>
+            <StackPanel Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="96">
+                <TextBlock Name="YG2TX" TextWrapping="Wrap" Text="N/A" FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <Button Name="YG2Reset" Content="重置" Click="YG2Reset_Click"/>
+            </StackPanel>
+            <StackPanel Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Width="96">
+                <TextBlock Name="YG3TX" TextWrapping="Wrap" Text="N/A" FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <Button Name="YG3Reset" Content="重置" Click="YG3Reset_Click"/>
+            </StackPanel>
+            <Button Name="Bt9" Grid.Column="2" Grid.Row="0" Content="月光4" HorizontalAlignment="Center" VerticalAlignment="Center" Width="88" Height="32" Click="BtMoon_Click"/>
+            <Button Name="Bt10" Grid.Column="2" Grid.Row="1" Content="月光5" HorizontalAlignment="Center" VerticalAlignment="Center" Width="88" Height="32" Click="BtMoon_Click"/>
+            <StackPanel Grid.Column="3" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="96">
+                <TextBlock Name="YG4TX" TextWrapping="Wrap" Text="N/A" FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <Button Name="YG4Reset" Content="重置" Click="YG4Reset_Click"/>
+            </StackPanel>
+            <StackPanel Grid.Column="3" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="96">
+                <TextBlock Name="YG5TX" TextWrapping="Wrap" Text="N/A" FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <Button Name="YG5Reset" Content="重置" Click="YG5Reset_Click"/>
+            </StackPanel>
         </Grid>
         
+        <TextBlock TextWrapping="Wrap" FontSize="32" FontWeight="Bold" Height="50"><Run Language="zh-cn" Text="————十八门派————"/><LineBreak/><Run Language="zh-cn"/></TextBlock>
+        <Button Name="ShiBaMenPaiReseter" Click="ShiBaMenPaiReseter_Click" Content="重置门派" Height="50"/>
+        <Grid x:Name="ShibaMenPai">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="96" />
+                <ColumnDefinition Width="96" />
+                <ColumnDefinition Width="96" />
+                <ColumnDefinition Width="96" />
+                <ColumnDefinition Width="96" />
+                <ColumnDefinition Width="96" />
+            </Grid.ColumnDefinitions>
+            <Button Name="Bt12" Grid.Row="0" Grid.Column="0" Content="化生" HorizontalAlignment="Center" VerticalAlignment="Center" Width="64" Height="24" Click="MenPaiBT_Click"/>
+            <Button Name="Bt13" Grid.Row="0" Grid.Column="1" Content="女儿" HorizontalAlignment="Center" VerticalAlignment="Center" Width="64" Height="24" Click="MenPaiBT_Click"/>
+            <Button Name="Bt14" Grid.Row="0" Grid.Column="2" Content="大唐" HorizontalAlignment="Center" VerticalAlignment="Center" Width="64" Height="24" Click="MenPaiBT_Click"/>
+            <Button Name="Bt15" Grid.Row="0" Grid.Column="3" Content="方寸" HorizontalAlignment="Center" VerticalAlignment="Center" Width="64" Height="24" Click="MenPaiBT_Click"/>
+            <Button Name="Bt16" Grid.Row="0" Grid.Column="4" Content="神木" HorizontalAlignment="Center" VerticalAlignment="Center" Width="64" Height="24" Click="MenPaiBT_Click"/>
+            <Button Name="Bt17" Grid.Row="0" Grid.Column="5" Content="天机" HorizontalAlignment="Center" VerticalAlignment="Center" Width="64" Height="24" Click="MenPaiBT_Click"/>
+            <Button Name="Bt18" Grid.Row="1" Grid.Column="0" Content="狮驼" HorizontalAlignment="Center" VerticalAlignment="Center" Width="64" Height="24" Click="MenPaiBT_Click"/>
+            <Button Name="Bt19" Grid.Row="1" Grid.Column="1" Content="盘丝" HorizontalAlignment="Center" VerticalAlignment="Center" Width="64" Height="24" Click="MenPaiBT_Click"/>
+            <Button Name="Bt20" Grid.Row="1" Grid.Column="2" Content="魔王" HorizontalAlignment="Center" VerticalAlignment="Center" Width="64" Height="24" Click="MenPaiBT_Click"/>
+            <Button Name="Bt21" Grid.Row="1" Grid.Column="3" Content="地府" HorizontalAlignment="Center" VerticalAlignment="Center" Width="64" Height="24" Click="MenPaiBT_Click"/>
+            <Button Name="Bt22" Grid.Row="1" Grid.Column="4" Content="无底" HorizontalAlignment="Center" VerticalAlignment="Center" Width="64" Height="24" Click="MenPaiBT_Click"/>
+            <Button Name="Bt23" Grid.Row="1" Grid.Column="5" Content="女魃" HorizontalAlignment="Center" VerticalAlignment="Center" Width="64" Height="24" Click="MenPaiBT_Click"/>
+            <Button Name="Bt24" Grid.Row="2" Grid.Column="0" Content="五庄" HorizontalAlignment="Center" VerticalAlignment="Center" Width="64" Height="24" Click="MenPaiBT_Click"/>
+            <Button Name="Bt25" Grid.Row="2" Grid.Column="1" Content="普陀" HorizontalAlignment="Center" VerticalAlignment="Center" Width="64" Height="24" Click="MenPaiBT_Click"/>
+            <Button Name="Bt26" Grid.Row="2" Grid.Column="2" Content="天宫" HorizontalAlignment="Center" VerticalAlignment="Center" Width="64" Height="24" Click="MenPaiBT_Click"/>
+            <Button Name="Bt27" Grid.Row="2" Grid.Column="3" Content="龙宫" HorizontalAlignment="Center" VerticalAlignment="Center" Width="64" Height="24" Click="MenPaiBT_Click"/>
+            <Button Name="Bt28" Grid.Row="2" Grid.Column="4" Content="凌波" HorizontalAlignment="Center" VerticalAlignment="Center" Width="64" Height="24" Click="MenPaiBT_Click"/>
+            <Button Name="Bt29" Grid.Row="2" Grid.Column="5" Content="花果" HorizontalAlignment="Center" VerticalAlignment="Center" Width="64" Height="24" Click="MenPaiBT_Click"/>
+        </Grid>
+
     </StackPanel>
 
 </Window>

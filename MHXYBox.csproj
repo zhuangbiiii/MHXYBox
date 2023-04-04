@@ -7,12 +7,4 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
-  <ItemGroup>
-    <None Remove="下一页.png" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Resource Include="下一页.png" />
-  </ItemGroup>
-
 </Project>

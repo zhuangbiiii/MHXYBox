@@ -1,0 +1,39 @@
+﻿<Window x:Class="MHXYBox.MenPaiSelector"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Input" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen">
+    <Grid x:Name="TimeGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="96" />
+            <ColumnDefinition Width="96" />
+            <ColumnDefinition Width="96" />
+            <ColumnDefinition Width="96" />
+            <ColumnDefinition Width="96" />
+            <ColumnDefinition Width="96" />
+        </Grid.ColumnDefinitions>
+        <Button Name="Bt1" Grid.Row="0" Grid.Column="0" Content="化生" HorizontalAlignment="Center" VerticalAlignment="Center" Width="88" Height="32" Click="Bt_Click"/>
+        <Button Name="Bt2" Grid.Row="0" Grid.Column="1" Content="女儿" HorizontalAlignment="Center" VerticalAlignment="Center" Width="88" Height="32" Click="Bt_Click"/>
+        <Button Name="Bt3" Grid.Row="0" Grid.Column="2" Content="大唐" HorizontalAlignment="Center" VerticalAlignment="Center" Width="88" Height="32" Click="Bt_Click"/>
+        <Button Name="Bt4" Grid.Row="0" Grid.Column="3" Content="方寸" HorizontalAlignment="Center" VerticalAlignment="Center" Width="88" Height="32" Click="Bt_Click"/>
+        <Button Name="Bt5" Grid.Row="0" Grid.Column="4" Content="神木" HorizontalAlignment="Center" VerticalAlignment="Center" Width="88" Height="32" Click="Bt_Click"/>
+        <Button Name="Bt6" Grid.Row="0" Grid.Column="5" Content="天机" HorizontalAlignment="Center" VerticalAlignment="Center" Width="88" Height="32" Click="Bt_Click"/>
+        <Button Name="Bt7" Grid.Row="1" Grid.Column="0" Content="狮驼" HorizontalAlignment="Center" VerticalAlignment="Center" Width="88" Height="32" Click="Bt_Click"/>
+        <Button Name="Bt8" Grid.Row="1" Grid.Column="1" Content="盘丝" HorizontalAlignment="Center" VerticalAlignment="Center" Width="88" Height="32" Click="Bt_Click"/>
+        <Button Name="Bt9" Grid.Row="1" Grid.Column="2" Content="魔王" HorizontalAlignment="Center" VerticalAlignment="Center" Width="88" Height="32" Click="Bt_Click"/>
+        <Button Name="Bt10" Grid.Row="1" Grid.Column="3" Content="地府" HorizontalAlignment="Center" VerticalAlignment="Center" Width="88" Height="32" Click="Bt_Click"/>
+        <Button Name="Bt11" Grid.Row="1" Grid.Column="4" Content="无底" HorizontalAlignment="Center" VerticalAlignment="Center" Width="88" Height="32" Click="Bt_Click"/>
+        <Button Name="Bt12" Grid.Row="1" Grid.Column="5" Content="女魃" HorizontalAlignment="Center" VerticalAlignment="Center" Width="88" Height="32" Click="Bt_Click"/>
+        <Button Name="Bt13" Grid.Row="2" Grid.Column="0" Content="五庄" HorizontalAlignment="Center" VerticalAlignment="Center" Width="88" Height="32" Click="Bt_Click"/>
+        <Button Name="Bt14" Grid.Row="2" Grid.Column="1" Content="普陀" HorizontalAlignment="Center" VerticalAlignment="Center" Width="88" Height="32" Click="Bt_Click"/>
+        <Button Name="Bt15" Grid.Row="2" Grid.Column="2" Content="天宫" HorizontalAlignment="Center" VerticalAlignment="Center" Width="88" Height="32" Click="Bt_Click"/>
+        <Button Name="Bt16" Grid.Row="2" Grid.Column="3" Content="龙宫" HorizontalAlignment="Center" VerticalAlignment="Center" Width="88" Height="32" Click="Bt_Click"/>
+        <Button Name="Bt17" Grid.Row="2" Grid.Column="4" Content="凌波" HorizontalAlignment="Center" VerticalAlignment="Center" Width="88" Height="32" Click="Bt_Click"/>
+        <Button Name="Bt18" Grid.Row="2" Grid.Column="5" Content="花果" HorizontalAlignment="Center" VerticalAlignment="Center" Width="88" Height="32" Click="Bt_Click"/>
+    </Grid>
+</Window>
